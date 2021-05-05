@@ -16,17 +16,10 @@ public class Movie {
 
     public void setPriceCode(int arg) {
         switch (arg) {
-            case REGULAR:
-                price = new RegularPrice();
-                break;
-            case CHILDRENS:
-                price = new ChildrensPrice();
-                break;
-            case NEW_RELEASE:
-                price = new NewReleasePrice();
-                break;
-            default:
-                throw new IllegalArgumentException("Incorrect Price Code");
+            case REGULAR -> price = new RegularPrice();
+            case CHILDRENS -> price = new ChildrensPrice();
+            case NEW_RELEASE -> price = new NewReleasePrice();
+            default -> throw new IllegalArgumentException("Incorrect Price Code");
         }
     }
 
