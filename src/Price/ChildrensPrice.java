@@ -1,3 +1,7 @@
+package Price;
+
+import Movie.Movie;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Berkling

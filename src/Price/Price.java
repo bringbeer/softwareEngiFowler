@@ -1,3 +1,5 @@
+package Price;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Berkling

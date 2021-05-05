@@ -1,3 +1,10 @@
+package Movie;
+
+import Price.ChildrensPrice;
+import Price.Price;
+import Price.RegularPrice;
+import Price.NewReleasePrice;
+
 public class Movie {
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;
@@ -19,7 +26,7 @@ public class Movie {
             case REGULAR -> price = new RegularPrice();
             case CHILDRENS -> price = new ChildrensPrice();
             case NEW_RELEASE -> price = new NewReleasePrice();
-            default -> throw new IllegalArgumentException("Incorrect Price Code");
+            default -> throw new IllegalArgumentException("Incorrect Price.Price Code");
         }
     }
 

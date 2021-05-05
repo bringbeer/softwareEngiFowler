@@ -1,3 +1,5 @@
+import Movie.Movie;
+
 class Rental {
     private final Movie movie;
     private final int daysRented;
