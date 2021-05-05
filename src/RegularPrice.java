@@ -6,18 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 public class RegularPrice implements Price {
-    public int getPriceCode(){
+    public int getPriceCode() {
         return Movie.REGULAR;
     }
 
-    public double getCharge(int daysRented){
-        if (daysRented > 2) return (daysRented - 2 ) * 1.5;
+    public double getCharge(int daysRented) {
+        if (daysRented > 2) return (daysRented - 2) * 1.5;
         else return 2;
     }
-    public int getFrequentRenterPoints() {
-        return 1;
-    }
 
+    public int FREQUENTRENTERPOINTS = 1;
 }
+
+
 
 

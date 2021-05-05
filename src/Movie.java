@@ -39,7 +39,7 @@ public class Movie {
     }
 
     public int getFrequentRenterPoints() {
-        return price.getFrequentRenterPoints();
+        return price.FREQUENTRENTERPOINTS;
 
     }
 
