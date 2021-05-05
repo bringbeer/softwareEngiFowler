@@ -2,13 +2,11 @@ import java.util.*;
 
 class Customer {
     private final String name;
-    private final ArrayList rentals = new ArrayList();
+    private final ArrayList<Rental> rentals = new ArrayList<>();
 
     public Customer(String newname) {
         name = newname;
     }
-
-    ;
 
     public void addRental(Rental arg) {
         rentals.add(arg);
@@ -22,9 +20,8 @@ class Customer {
         String result = "Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
-        for (Object element : rentals) {
-            Rental each = (Rental) element;
-            result += "\t" + each.getMovie().getTitle() + "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
+        for (Rental element : rentals) {
+            result += "\t" + element.getMovie().getTitle() + "\t" + "\t" + element.getDaysRented() + "\t" + String.valueOf(element.getCharge()) + "\n";
         }
 
         //add footer lines
@@ -50,20 +47,18 @@ class Customer {
     private double getTotalCharge() {
         double result = 0;
 
-        for (Object element : rentals) {
-            Rental each = (Rental) element;
-            result += each.getCharge();
+        for (Rental element : rentals) {
+            result += element.getCharge();
         }
 
         return result;
     }
 
     private int getTotalFrequentRenterPoints() {
-        int result = 0;
+        var result = 0;
 
-        for (Object element : rentals) {
-            Rental each = (Rental) element;
-            result += each.getFrequentRenterPoints();
+        for (Rental element : rentals) {
+            result += element.getFrequentRenterPoints();
         }
 
         return result;
