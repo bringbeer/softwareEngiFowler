@@ -1,9 +1,15 @@
+package Movie;
+
+import Price.ChildrensPrice;
+import Price.Price;
+import Price.RegularPrice;
+import Price.NewReleasePrice;
+
 public class Movie {
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;
     public static final int NEW_RELEASE = 1;
-    private String title;
-    private int priceCode;
+    private final String title;
     private Price price;
 
     public Movie(String newtitle, int priceCode) {
@@ -17,17 +23,10 @@ public class Movie {
 
     public void setPriceCode(int arg) {
         switch (arg) {
-            case REGULAR:
-                price = new RegularPrice();
-                break;
-            case CHILDRENS:
-                price = new ChildrensPrice();
-                break;
-            case NEW_RELEASE:
-                price = new NewReleasePrice();
-                break;
-            default:
-                throw new IllegalArgumentException("Incorrect Price Code");
+            case REGULAR -> price = new RegularPrice();
+            case CHILDRENS -> price = new ChildrensPrice();
+            case NEW_RELEASE -> price = new NewReleasePrice();
+            default -> throw new IllegalArgumentException("Incorrect Price.Price Code");
         }
     }
 
@@ -39,8 +38,8 @@ public class Movie {
         return price.getCharge(daysRented);
     }
 
-    public int getFrequentRenterPoints( int daysRented) {
-        return price.getFrequentRenterPoints(daysRented);
+    public int getFrequentRenterPoints() {
+        return price.FREQUENTRENTERPOINTS;
 
     }
 

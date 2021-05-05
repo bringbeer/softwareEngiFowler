@@ -1,3 +1,5 @@
+package Price;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Berkling
@@ -6,7 +8,7 @@
  * To change this template use File | Settings | File Templates.
  */
 public interface Price {
-    abstract int getPriceCode();
-    abstract double getCharge(int daysRented);
-    abstract int getFrequentRenterPoints(int daysRented);
+    int getPriceCode();
+    double getCharge(int daysRented);
+    int FREQUENTRENTERPOINTS = 0;
 }

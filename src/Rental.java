@@ -1,6 +1,8 @@
+import Movie.Movie;
+
 class Rental {
-    private Movie movie;
-    private int daysRented;
+    private final Movie movie;
+    private final int daysRented;
     public Rental(Movie newmovie, int newdaysRented) {
         movie = newmovie;
         daysRented = newdaysRented;
@@ -17,7 +19,7 @@ class Rental {
     }
 
     public int getFrequentRenterPoints() {
-        return getMovie().getFrequentRenterPoints(getDaysRented());
+        return getMovie().getFrequentRenterPoints();
     }
 
 
