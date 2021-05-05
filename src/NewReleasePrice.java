@@ -14,7 +14,7 @@ public class NewReleasePrice implements Price {
         return (daysRented * 3 );
     }
 
-    public int getFrequentRenterPoints(int daysRented) {
+    public int getFrequentRenterPoints() {
         return 2;
     }
 

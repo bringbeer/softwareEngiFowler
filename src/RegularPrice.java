@@ -14,7 +14,7 @@ public class RegularPrice implements Price {
         if (daysRented > 2) return (daysRented - 2 ) * 1.5;
         else return 2;
     }
-    public int getFrequentRenterPoints(int daysRented) {
+    public int getFrequentRenterPoints() {
         return 1;
     }
 
